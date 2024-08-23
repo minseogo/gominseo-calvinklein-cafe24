@@ -1,0 +1,70 @@
+<!--@css(/gms/css/slideMenu.css)-->
+<!--@js(/gms/js/slide_menu.js)-->
+<aside id="aside" module="layout_slidePackage">
+    <div id="slideCateList" class="categoryCont">
+        <ul module="layout_category" class="categoryList mt-5">
+            <li id="cate{$cate_no}" class="ul_name eng_hdr_main_sb_16">
+                <a href="#none" class="cate" cate="{$param}" class="">{$name|cut 25}
+                </a> 
+            </li>
+            <li id="cate{$cate_no}" class="ul_name eng_hdr_main_sb_16">
+                <a href="#none" class="cate" cate="{$param}">{$name|cut 25}</a>
+            </li>
+        </ul>
+        <div id="slideProjectList" module="layout_project">
+            <h2 class="selected">기획전<button type="button" class="icoCategory">펼침</button></h2>
+            <ul class="categoryList">
+                <li id="cate{$cate_no}">
+                    <a href="#none" class="cate" cate="{$param}">{$category_text|cut 25}</a>
+                </li>
+                <li id="cate{$cate_no}">
+                    <a href="#none" class="cate" cate="{$param}">{$category_text|cut 25}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bookmarkCategory" id="bookmarkCategory">
+            <div id="bookmartCateArea" class="bookmarkCategory"></div>
+        </div>
+        <div class="multishop" module="Layout_multishopList" id="slideMultishopList">
+            <h2 class="selected countryTitle">SHIP TO<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="Layout_multishopListmultioptionCountry" class="xans-element- xans-multishop xans-multishop-listitem">
+                <li>
+                    <a href="#none" class="countryLink"></a>
+                </li>
+            </ul>
+            <h2 class="selected languageTitle">LANGUAGE<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="Layout_multishopListmultioptionLanguage" class="xans-multishop xans-multishop-listitem">
+                <li>
+                    <a href="#none" class="languageLink">
+                        <span class="name"> {$language_name}</span>
+                    </a>
+                </li>
+            </ul>
+            <h2 class="selected">{$translate_language}<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="multishop_listitem">
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <span class="name">{$locale_language} : {$shop_name}</span>
+                    </a>
+                </li>
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <span class="name">{$locale_language} : {$shop_name}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="loginState">
+        <!-- 로그인 상태가 아닐 때 -->
+        <p module="Layout_stateLogoff" class="member">
+            <a href="/member/agreement.html" class="btnJoin me-2">회원가입</a>
+            <a href="/member/login.html" class="btnLogin">로그인</a>
+        </p>
+        <!-- 로그인 상태일 때 -->
+        <p module="Layout_statelogon">
+            <a href="{$action_logout}">로그아웃</a>
+        </p>
+    </div>
+    <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_close.png" width="13" alt="닫기"></a>
+</aside>
