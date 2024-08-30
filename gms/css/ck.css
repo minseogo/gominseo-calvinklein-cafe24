@@ -288,19 +288,25 @@ h1 img {
     padding: 0;
   }
 }
+@media (max-width: 575px) {
+  #m_calvin_selling .swiper_mo .prdList .thumbnail .prdImg a{
+    font-size: 0;
+  }
+}
+
 
 #m_calvin_selling .mo_swiper_height {
   max-height: 910px;
   height: 176vw;
 }
-@media (max-width: 5000px) and (min-width: 575px) {
+/* @media (max-width: 5000px) and (min-width: 575px) {
   #m_calvin_selling {
     height: 0;
     overflow: hidden;
     margin: 0;
     padding: 0;
   }
-}
+} */
 
 #video .bi-play-fill {
   font-size: 100px;
@@ -319,7 +325,10 @@ h1 img {
 }
 @media (max-width: 991px) {
   #jk_new .jk_mobile div {
-    width: 100%;
+    max-width: 100%;
+  }
+  #jk_new .jk-text{
+    text-align: center;
   }
 }
 @media (max-width: 375px) {
@@ -419,7 +428,7 @@ h1 img {
 }
 @media (max-width: 990px) {
   #email_form .submit_button {
-    width: 0;
+    width: 30px;
   }
 }
 #email_form .submit_button:hover {

@@ -1,0 +1,34 @@
+/* 상세페이지 상품옵션 */
+#totalProducts tr.option_product[target-key="23"] p{
+    padding-bottom: 0 !important;
+    font-size: 0 !important;
+}
+
+
+#totalProducts tr.option_product[target-key="23"] p.product{
+    font-size: 14px !important;
+} 
+#totalProducts tr.option_product[target-key="23"] p input{
+    font-size: 13px !important;
+    text-align: center;
+
+}
+#totalProducts tr.option_product[target-key="23"] p.product + p{
+    display: flex;
+}
+#totalProducts > table > tbody > tr.option_product[target-key="23"] > td:first-child{
+    display: flex;
+    align-items: center;
+}
+#totalProducts > table > tbody > tr.option_product[target-key="23"] > td:first-child .up{
+    order: 3;
+}
+#totalProducts > table > tbody > tr.option_product[target-key="23"] > td:first-child .down{
+   order: 1; 
+}
+#totalProducts > table > tbody > tr.option_product[target-key="23"] > td:first-child #option_box1_quantity{
+    order: 2;
+}
+#totalProducts > table > tbody > tr.option_product[target-key="23"]{
+    border-top: 1px solid #e8e8e8;
+}

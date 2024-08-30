@@ -2,7 +2,7 @@
  * 모바일쇼핑몰 슬라이딩메뉴 */
 var aCategory = [];
 $(function(){
-    $('#hd').append('<div id="dimmedSlider" class="d-lg-none"></div>');
+    $('#hd').append('<div id="dimmedSlider"></div>');
     var methods = {
         aCategory    : [],
         aSubCategory : {},
@@ -55,7 +55,7 @@ $(function(){
             var aHtml = [];
             var sMyCateList = localStorage.getItem("myCateList");
             if (methods.aSubCategory[iCateNo] != undefined) {
-                aHtml.push('<ul class="slideSubMenu eng_list_txt_reg_18">');
+                aHtml.push('<ul class="slideSubMenu">');
                 $(methods.aSubCategory[iCateNo]).each(function() {
                     var sNextParentNo = this.cate_no;
                     var sCateSelected = (checkInArray(sMyCateList, this.cate_no) == true) ? ' selected' : '';
@@ -67,11 +67,11 @@ $(function(){
                         var sHref = '#none';
                     }
                     aHtml.push('<a href="'+sHref+'" class="cate" cate="'+this.param+'" onclick="subMenuEvent(this);">'+this.name+'</a>');
-                    if (methods.aSubCategory[sNextParentNo] != undefined)  aHtml.push('<a href="/product/list_thumb.html'+this.param+'" class="view d-none">view</a>');
-                    
+                    if (methods.aSubCategory[sNextParentNo] != undefined)  aHtml.push('<a href="/product/list_thumb.html'+this.param+'" class="view">상품보기</a>');
+                    aHtml.push('<button type="button" class="icoBookmark'+sCateSelected+'" id="icoBookmark">즐겨찾기 추가</button>');
 
                     if (methods.aSubCategory[sNextParentNo] != undefined) {
-                        aHtml.push('<ul class="kr_in_list_txt_reg_16 mx-4">');
+                        aHtml.push('<ul>');
                         $(methods.aSubCategory[sNextParentNo]).each(function() {
                             var sNextParentNo2 = this.cate_no;
                             var sCateSelected = (checkInArray(sMyCateList, this.cate_no) == true) ? ' selected' : '';
@@ -83,8 +83,8 @@ $(function(){
                                 var sHref = '#none';
                             }
                             aHtml.push('<a href="'+sHref+'" class="cate" cate="'+this.param+'" onclick="subMenuEvent(this);">'+this.name+'</a>');
-                            if (methods.aSubCategory[sNextParentNo] != undefined)  aHtml.push('<a href="/product/list_thumb.html'+this.param+'" class="view">view</a>');
-
+                            if (methods.aSubCategory[sNextParentNo] != undefined)  aHtml.push('<a href="/product/list_thumb.html'+this.param+'" class="view">상품보기</a>');
+                            aHtml.push('<button type="button" class="icoBookmark'+sCateSelected+'" id="icoBookmark">즐겨찾기 추가</button>');
 
                             if (methods.aSubCategory[sNextParentNo2] != undefined) {
                                 aHtml.push('<ul>');

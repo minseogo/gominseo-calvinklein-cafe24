@@ -1,14 +1,13 @@
 <!--@layout(/layout/basic/main.html)-->
 
 
-
 <!--
     판다씨 배너 매니저
     그룹명 : 메인페이지 슬라이드 
 -->
-<div pandassi-banner-group="fbb28d4fa6e69097db2b">
+<div pandassi-banner-group="fbb28d4fa6e69097db2b" >
 
-    <div pandassi-banner><!-- 배너 반복시작 // -->
+    <div pandassi-banner class="main_banner"><!-- 배너 반복시작 // -->
         <a href="_link_" target="_target_" title="_name_">_imgTag_</a>
     </div><!-- // 반복종료 -->
 
@@ -20,11 +19,33 @@
 <!--@import(/product/shoppQ/searchContent.html)-->
 
 
+<div id="celebrity_outfit" class="d-flex justify-content-center align-items-center flex-lg-row flex-column margin_top_1">
+    <div class="margin_right_1 position-relative d-flex justify-content-center m-lg-0 mt-1">
+        <div class="position-relative mw-100 overflow-hidden font_0">
 
+            <img class="d-block mw-100" src="./gms/img/jk_outfit.png" alt="">
+            <div class="text-overlay text-white text-center position-absolute">
+                <p class="m-0 font_eng eng_img_sec_title_reg_24">MEN'S
+                    <span class="d-block">READY TO WEAR</span>
+                </p>
+                <button class="bg-transparent kr_btn_txt_white_med_16 font_kr mt-3 celeb_btn border-white">정국 착장 제품 구매하기</button>
+            </div>
+        </div>
+    </div>
+    <div class="jen position-relative d-flex justify-content-center m-lg-0 mt-1">
+        <div class="position-relative mw-100 overflow-hidden font_0">
+            <img class="d-block mw-100" src="./gms/img/jen_outfit.png" alt="">
+            <div class="text-overlay text-white text-center position-absolute">
+                <p class="m-0 font_eng eng_img_sec_title_reg_24">WOMEN'S
+                    <span class="d-block">READY TO WEAR</span>
+                </p>
+                <button class="bg-transparent kr_btn_txt_white_med_16 font_kr mt-3 celeb_btn border-white">제니 착장 제품 구매하기</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-<div id="calvin_selling"  class=" d-flex justify-content-end flex-column component_spacing">
+<div id="calvin_selling"  class="justify-content-end flex-column component_spacing d-sm-flex d-none">
     <div class="title">
         <h2 class="font_eng eng_sec_title_black_reg_38 text-start">
             <!-- <span style="display: {$category_title_text_display}">{$category_title_text}</span>
@@ -50,11 +71,11 @@
                                         <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                                     </span>
                                 </a>
-                                <span class="wish">{$list_wish_icon}</span>
+                                <!-- <span class="wish">{$list_wish_icon}</span> -->
                             </div>
                             <div class="icon">
                                 <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$rental_icon}</div>
-                                <div class="button">
+                                <div class="button main_cart">
                                     <div class="likeButton {$disp_likeprd_class}">
                                         <button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button>
                                     </div>
@@ -87,11 +108,11 @@
                                         <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                                     </span>
                                 </a>
-                                <span class="wish">{$list_wish_icon}</span>
+                                <!-- <span class="wish">{$list_wish_icon}</span> -->
                             </div>
                             <div class="icon">
                                 <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$rental_icon}</div>
-                                <div class="button">
+                                <div class="button main_cart">
                                     <div class="likeButton {$disp_likeprd_class}">
                                         <button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button>
                                     </div>
@@ -119,7 +140,7 @@
     </div>
 </div>
 
-<div id="m_calvin_selling"  class="d-flex flex-column component_spacing">
+<div id="m_calvin_selling"  class="d-flex flex-column component_spacing d-sm-none">
     <div class="title">
         <h2 class="font_eng eng_sec_title_black_reg_38 title_spacing text-center">
             <!-- <span style="display: {$category_title_text_display}">{$category_title_text}</span>
@@ -146,11 +167,11 @@
                                             <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                                         </span>
                                     </a>
-                                    <span class="wish">{$list_wish_icon}</span>
+                                    <!-- <span class="wish">{$list_wish_icon}</span> -->
                                 </div>
-                                <div class="icon">
+                                <div class="icon d-none d-sm-flex">
                                     <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$rental_icon}</div>
-                                    <div class="button">
+                                    <div class="button main_cart">
                                         <div class="likeButton {$disp_likeprd_class}">
                                             <button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button>
                                         </div>
@@ -166,7 +187,7 @@
                                 </strong>
                                 <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
                                 <span class="name {$rental_icon|display}">월 {$rental_maximum_price|numberformat}원 / {$rental_maximum_term}개월</span>
-                                <ul module="product_ListItem" class="spec mt-2 font_kr kr_price_txt_med_15">
+                                <ul module="product_ListItem" class="spec mt-sm-2 mt-0 font_kr kr_price_txt_med_15">
                                     <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
                                     <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
                                 </ul>
@@ -183,11 +204,11 @@
                                             <span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span>
                                         </span>
                                     </a>
-                                    <span class="wish">{$list_wish_icon}</span>
+                                    <!-- <span class="wish">{$list_wish_icon}</span> -->
                                 </div>
-                                <div class="icon">
+                                <div class="icon d-none d-sm-flex">
                                     <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$rental_icon}</div>
-                                    <div class="button">
+                                    <div class="button main_cart">
                                         <div class="likeButton {$disp_likeprd_class}">
                                             <button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button>
                                         </div>
@@ -203,7 +224,7 @@
                                 </strong>
                                 <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
                                 <span class="name {$rental_icon|display}">월 {$rental_maximum_price|numberformat}원 / {$rental_maximum_term}개월</span>
-                                <ul module="product_ListItem" class="spec mt-2 font_kr kr_price_txt_med_15">
+                                <ul module="product_ListItem" class="spec mt-sm-2 mt-0 font_kr kr_price_txt_med_15">
                                     <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
                                     <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
                                 </ul>
@@ -225,13 +246,146 @@
     </div>
 </div>
 
+<div id="jen_in" class="component_spacing">
+    <div class="title_spacing">
+        <p class="font_eng eng_sec_title_black_reg_38 d-flex flex-column align-items-center text-center text-sm-start">JENNIE in Must Watch Denim
+            <span class="font_kr kr_sub_txt_black_med_17">스크린 속 아이콘. 제니의 머스트해브 데님</span>
+        </p>
+    </div>
+    <div class="d-flex font_0">
+        <img class="col-sm-4 jen_f d-sm-block d-none jen_f w-100 p-0" src="./gms/img/jennydenim_first.png" alt="">
+        <img class="col-sm-4 jen_f d-sm-block d-none jen_s w-100 p-0" src="./gms/img/jennydenim_second.png" alt="">
+        <img class="col-sm-4 col-12 jen_t w-100 p-0" src="./gms/img/jennydenim_third.png" alt="">
+    </div>
+    <div class="d-flex justify-content-between align-items-center pic_txt_between border-bottom flex-md-row flex-column">
+        <div class="txt_title_spacing">
+            <p class="font_eng eng_sec_title_black_reg_38 d-flex flex-column align-items-sm-start align-items-center">JENNIE in New Denim
+                <span class="font_kr kr_sub_txt_black_med_17 mt-1">CK만의 팟과 워싱으로 선보이는 제니의 아니코닉 데님 모먼트</span>
+            </p>
+        </div>
+        <div class="btns_title_spacing mt-md-0 mt-5">
+            <button class="font_kr kr_btn_txt_white_med_16 border-0 black_btns">모던 코튼 구매하기</button>
+            <button class="font_kr kr_btn_txt_white_med_16 border-0 black_btns ms-4">티셔츠 코튼 구매하기</button>
+        </div>
+    </div>
+</div>
+
+<div id="jk_new">
+    <div class="font_kr kr_sub_txt_black_lt_16 border_spacing">
+        <p class="d-lg-flex d-none flex-column align-items-center lh-lg ">캘빈클라인은 한국의 21세기 팝 아이콘인 방탄소년단(BTS)의 멤버인 정국과 2024년 봄 캠페인 컬렉션 오픈을 함께 합니다.
+            <span>캘빈클라인 데님을 특징으로 하는 이번 캠페인은 젊은 에너지와   90년대 스트레이트 핏 진, 전형적인 데님 실루엣에 향수를 불러일으키고,</span>
+            <span>새로운 데님부터 고급 캐주얼 의류까지 Calvin Klein Jeans 2024 봄 컬렉션은 아이코닉한 제품에 독특한 스타일을 선사하고 새로운 세대를 위한 브랜드의 진정성에 초점을 맞췄습니다.</span>
+        </p>
+    </div>
+    <div class="d-flex flex-lg-row flex-column mx-sm-5 mt-sm-4 mx-sm-5 mt-sm-4 jk_mobile">
+        <div class="col-8 overflow-hidden p-0 font_0">
+            <img class="mw-100 h-100" src="./gms/img/jk_new.png" alt="">
+        </div>
+        <div class="bg-black col-4 d-flex align-items-end justify-content-center justify-content-lg-start">
+            <div class="txt_spacing_in_bg mw-100 ps-lg-5 py-5">
+                <div class="jk-text">
+                    <p class="font_eng eng_sec_title_white_reg_38 d-flex flex-column">JUNGKOOK In New Collection
+                        <span class="font_kr kr_sub_txt_white_med_17">레이어드 스타일링으로 맞이하는 봄,</span>
+                        <span class="font_kr kr_sub_txt_white_med_17">정국은 방금 캘빈 클라인(Calvin Klein)과 함께</span>
+                        <span class="font_kr kr_sub_txt_white_med_17">또 다른 시선을 사로잡는 캠페인을 준비했습니다</span>    
+                    </p>
+                </div>
+                <div class="d-flex mt-5 justify-content-center justify-content-lg-start">
+                    <button class="font_kr kr_btn_txt_black_med_16 border-0 white_btns">베스트셀러</button>
+                    <button class="font_kr kr_btn_txt_black_med_16 border-0 white_btns ms-4">온라인 익스클루시브</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="underwear" class="component_spacing">
+    <div class="d-flex flex-row flex-nowrap ">
+        <div class="col-5 d-md-flex d-none p-0">
+            <img class="w-100 h-100 object-fit-cover" src="./gms/img/underwear_title.png" alt="">
+          </div>
+          <div class="col-md-7 d-flex flex-column justify-content-between box_border_l p-0">
+            <div class="d-flex flex-fill box_border_b position-relative font_0">
+              <img class="w-50 h-100 object-fit-cover box_border_r" src="./gms/img/underwear_men.png" alt="">
+
+              <div class="m_img position-absolute d-sm-none w-100 text-white d-flex align-items-center justify-content-between flex-row px-3">
+              <p class="d-flex flex-column eng_under_title_white_reg_38">New Multipacks For Men
+                <span class="font_kr kr_under_txt_white_med_17">클래식한 코튼부터 마이크로 스트레치까지</span>
+              </p>
+              <button class="d-sm-none bg-transparent border-white text-white m_btn kr_btn_txt_white_med_16">남성 언더웨어 구매하기</button>
+              </div>
+              
+              <div class="bg-black d-sm-flex d-none align-items-end w-50 h-100">
+                <p class="font_eng eng_sec_title_white_reg_38 d-flex flex-column mx-lg-5 py-lg-5 mx-2 my-2">New Multipacks For Men
+                  <span class="font_kr kr_sub_txt_white_med_17">클래식한 코튼부터 마이크로 스트레치까지</span>
+                </p>
+              </div>
+            </div>
+            <div class="d-flex flex-fill position-relative font_0">
+              <img class="w-50 h-100 object-fit-cover order-2" src="./gms/img/underwear_women.png" alt="">
+
+              <div class="m_img position-absolute d-sm-none w-100 text-white d-flex align-items-center justify-content-between flex-row px-3">
+              <p class="d-flex flex-column eng_under_title_white_reg_38">Three Knickers For Women
+                <span class="font_kr kr_under_txt_white_med_17">캐주얼과 센슈얼리티의 또 다른 정의</span>
+              </p>
+              <button class="d-sm-none bg-transparent border-white text-white m_btn kr_btn_txt_white_med_16">여성 언더웨어 구매하기</button>
+              </div>                      
+
+              <div class="bg-black d-sm-flex d-none align-items-end justify-content-end w-50 h-100 box_border_r ">
+                <p class="font_eng eng_sec_title_white_reg_38 d-flex flex-column mx-lg-5 py-lg-5 mx-2 my-2 text-end">Three Knickers For Women
+                  <span class="font_kr kr_sub_txt_white_med_17">캐주얼과 센슈얼리티의 또 다른 정의</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-sm-flex d-none justify-content-between align-items-center pic_txt_between border-bottom flex-md-row flex-column">
+            <div class="txt_title_spacing text-center text-md-start">
+                <p class="font_eng eng_sec_title_black_reg_38 d-flex flex-column">Underwear Refresh
+                    <span class="font_kr kr_sub_txt_black_med_17 mt-1">캘빈클라인의 아이코닉한 속옷으로 자신감과 섹시함을, 클래식한 디자인</span>
+                    <span class="font_kr kr_sub_txt_black_med_17">시그니처 언더웨어 컬렉션으로 일상 필수품의 가치를 높여보세요</span> 
+                </p>
+            </div>
+            <div class="btns_title_spacing mt-md-0 mt-5">
+                <button class="font_kr kr_btn_txt_white_med_16 border-0 black_btns">여성 언더웨어 구매하기</button>
+                <button class="font_kr kr_btn_txt_white_med_16 border-0 black_btns ms-4 men_btn">남성 언더웨어 구매하기</button>
+            </div>
+        </div>
+</div>
+
+<div id="email_form">
+    <div class="email_bg d-lg-flex justify-content-lg-evenly flex-lg-row d-flex flex-column align-items-center">
+        <p class="font_kr kr_form_txt_reg_14 d-flex flex-column align-items-center d-lg-block my-3 my-lg-0 text-center ">
+            My Calvins 멤버에게 주어지는 웰컴, 생일, 그리고 회원 전용 혜택을 누려보세요!
+            <span class="text-center">Black 멤버로 업그레이드 하시고 더 많은 혜택을 받으세요!</span> 
+        </p>
+        <form class="d-flex align-items-center mw-100 font_0">
+            <input type="email" placeholder="이메일 주소를 입력해주세요" class="email_input p-2 font_kr kr_form_txt_reg_14 border-1 border-right-0">
+            <button type="submit" class="submit_button text-black kr_form_txt_reg_14 border-1 d-flex align-items-center justify-content-lg-center justify-content-end text-center font_kr kr_form_txt_reg_14 border-1">
+                <span class="button_text">등록</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right d-flex d-lg-none" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+            </button>
+        </form>
+        <div class="follow_icons d-lg-none my-1 font_0">
+            <img class="mx-2" src="./gms/img/kakao_mobile_logo.png" alt="">
+            <img class="me-2" src="./gms/img/naver_logo_mobile.png" alt="">
+            <img class="me-2" src="./gms/img/instagram_mobile_logo.png" alt="">
+            <img class="me-2" src="./gms/img/facebook_mobile_logo.png" alt="">
+            <img class="me-2" src="./gms/img/tik_tok_mobile_logo.png" alt="">
+            <img src="./gms/img/twitter_mobile_logo.png" alt="">     
+        </div>
+    </div>
+</div>
+
 <!-- Web Swiper -->
 <script>
     var swiper = new Swiper(".swiper_web", {
       watchSlidesProgress: true,
       slidesPerView: 4,
     });
-  </script>
+</script>
 <!-- Mobile Swiper -->
 <script>
     var swiper = new Swiper(".swiper_mo", {
@@ -241,73 +395,9 @@
         },
         spaceBetween: 30,
     });
-    </script>
+</script>
 
-<div module="product_listmain_2" class="ec-base-product">
-    <!--
-        $count = 8
-            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
-            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
-    -->
-    <div class="title">
-        <h2>
-            <span style="display: {$category_title_text_display};">{$category_title_text}</span>
-            <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
-        </h2>
-    </div>
-    <ul class="prdList grid2">
-        <li id="anchorBoxId_{$product_no}">
-            <div class="thumbnail">
-                <div class="prdImg">
-                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
-                    <span class="wish">{$list_wish_icon}</span>
-                </div>
-                <div class="icon">
-                    <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$rental_icon}</div>
-                    <div class="button">
-                        <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
-                        <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
-                    </div>
-                </div>
-            </div>
-            <div class="description">
-                <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
-                <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
-                <span class="name {$rental_icon|display}">월 {$rental_maximum_price|numberformat}원 / {$rental_maximum_term}개월</span>
-                <ul module="product_ListItem" class="spec">
-                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                </ul>
-            </div>
-        </li>
-        <li id="anchorBoxId_{$product_no}">
-            <div class="thumbnail">
-                <div class="prdImg">
-                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_big}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
-                    <span class="wish">{$list_wish_icon}</span>
-                </div>
-                <div class="icon">
-                    <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$rental_icon}</div>
-                    <div class="button">
-                        <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
-                        <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
-                    </div>
-                </div>
-            </div>
-            <div class="description">
-                <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
-                <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
-                <span class="name {$rental_icon|display}">월 {$rental_maximum_price|numberformat}원 / {$rental_maximum_term}개월</span>
-                <ul module="product_ListItem" class="spec">
-                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</div>
-
-<div module="product_listmain_3" class="ec-base-product">
+<div module="product_listmain_2" class="ec-base-product d-none">
     <!--
         $count = 8
             ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
@@ -627,7 +717,7 @@
     </ul>
 </div>
 
-<div id="boardArea">
+<div id="boardArea" class="d-none">
     <div module="board_listpackage_5">
         <!--@css(/css/module/layout/board_listpackage_5.css)-->
         <h2><span>자유게시판</span></h2>
