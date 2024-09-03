@@ -55,7 +55,7 @@ $(function(){
             var aHtml = [];
             var sMyCateList = localStorage.getItem("myCateList");
             if (methods.aSubCategory[iCateNo] != undefined) {
-                aHtml.push('<ul class="slideSubMenu eng_list_txt_reg_18">');
+                aHtml.push('<ul class="slideSubMenu eng_list_txt_reg_16">');
                 $(methods.aSubCategory[iCateNo]).each(function() {
                     var sNextParentNo = this.cate_no;
                     var sCateSelected = (checkInArray(sMyCateList, this.cate_no) == true) ? ' selected' : '';
@@ -71,7 +71,7 @@ $(function(){
                     
 
                     if (methods.aSubCategory[sNextParentNo] != undefined) {
-                        aHtml.push('<ul class="kr_in_list_txt_reg_16 mx-4">');
+                        aHtml.push('<ul class="kr_in_list_txt_reg_14 mx-4">');
                         $(methods.aSubCategory[sNextParentNo]).each(function() {
                             var sNextParentNo2 = this.cate_no;
                             var sCateSelected = (checkInArray(sMyCateList, this.cate_no) == true) ? ' selected' : '';
