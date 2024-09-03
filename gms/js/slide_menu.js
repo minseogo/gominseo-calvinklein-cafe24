@@ -170,7 +170,7 @@ $(function(){
                 }, 350);
             } else {
                 $('#btnFoldLayout').hide();
-                $('#aside').css({'z-index':0});
+                $('#aside').css({'z-index':1000});
                 setTimeout(function(){
                     $('#aside').css({'visibility':'', 'display':'none'});
                 }, 300);
