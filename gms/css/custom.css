@@ -1,0 +1,60 @@
+/* 상세페이지 상품옵션 */
+#totalProducts tr.option_product[data-option-index]p{
+    padding-bottom: 0 !important;
+    font-size: 0 !important;
+}
+
+
+#totalProducts tr.option_product[data-option-index] p.product{
+    font-size: 14px !important;
+} 
+#totalProducts tr.option_product[data-option-index] p input{
+    font-size: 13px !important;
+    text-align: center;
+
+}
+#totalProducts tr.option_product[data-option-index] p.product + p{
+    display: flex;
+}
+#totalProducts > table > tbody > tr.option_product[data-option-index] > td:first-child{
+    display: flex;
+    align-items: center;
+}
+#totalProducts > table > tbody > tr.option_product[data-option-index] > td:first-child .up{
+    order: 3;
+}
+#totalProducts > table > tbody > tr.option_product[data-option-index] > td:first-child .down{
+   order: 1; 
+}
+#totalProducts > table > tbody > tr.option_product[data-option-index] > td:first-child input[name="quantity_opt[]"] {
+    order: 2;
+}
+#totalProducts > table > tbody > tr.option_product[data-option-index]{
+    border-top: 1px solid #e8e8e8;
+}
+@media (max-width: 990px) and (min-width: 320px) {
+    /* #totalProducts tbody td p {
+        width: 75px !important;
+    } */
+    #totalProducts tr.option_product[data-option-index] {
+        display: flex;
+        align-items: center;
+    }
+    #totalProducts tbody td {
+        /* word-break: normal; */
+    }
+    #totalProducts tbody td p {
+        padding: 1px 10px 0 0;
+    }
+    #totalProducts tr.option_product[data-option-index] td p br {
+        display: none;
+    }
+}
+#totalProducts table .right{
+    text-align: center;
+}
+@media(max-width:990px){
+    #quick{
+        display: none;
+    }
+}

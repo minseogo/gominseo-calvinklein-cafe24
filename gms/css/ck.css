@@ -331,15 +331,15 @@ h1 img {
     text-align: center;
   }
 }
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   #jk_new img {
     -o-object-fit: cover;
        object-fit: cover;
-    max-width: 200% !important;
+    max-width: 100% !important;
     height: auto;
     margin-left: -50%;
   }
-}
+} */
 
 #underwear .underwear_mt {
   margin-top: 258px;
